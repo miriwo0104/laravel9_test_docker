@@ -15,12 +15,16 @@
 
 1. laravel9_test/dockerディレクトリに移動して下記コマンドを実行してください。
 
-    ```terminal
-    $ docker-compose up -d --build
-	$ docker-compose exec php composer install
-	$ docker-compose exec php cp .env.example .env
-	$ docker-compose exec php php artisan key:generate
-	$ docker-compose exec php php artisan migrate
-    ```
+    - ShellScriptを使用する場合
+
+        ```terminal
+        $ ./install.sh 1>&2
+        ```
+
+    - Makefileを使用する場合
+
+        ```terminal
+        $ make install
+        ```
 
 1. 上記コマンド実行後[http://localhost:8000/](http://localhost:8000/)にアクセスするとlaravelのホーム画面が表示されていれば作業完了です。
